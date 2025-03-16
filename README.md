@@ -13,7 +13,6 @@ Table Exporter is a simple and efficient tool for exporting data from HTML table
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [API](#api)
 - [Contributing](#contributing)
 - [License](#license)
 
