@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table to CSV Export</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <script src="popup.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Table to CSV Export</h1>
+        <div>
+            <label for="exportOption">Select:</label>
+            <select id="exportOption">
+                <option value="">-- Select an option --</option>
+                <option value="allTables">All Tables</option>
+                <option value="multipleXpathTable">Multiple Xpath Table</option>
+                <option value="xpathTable">Xpath Table</option>
+            </select>
+        </div>
+
+        <div id="tableDiv" class="hidden">
+            <p>Enter the XPath of the table you want to export:</p>
+            <input type="text" id="xpath" placeholder="Enter XPath" />
+            <button id="export">Export to CSV</button>
+        </div>
+
+        <div id="multipleXpathTable" class="hidden">
+            <p>Currently, multiple XPath expressions are not supported in this version.</p>
+        </div>
+
+        <div id="allTableDiv" class="hidden" style="margin-top: 5px;">
+            <p>Click to export all tables found on this webpage.</p>
+            <div class="centerBtnAlignCSS">
+                <button id="exportAll">Export All Tables to CSV</button>
+            </div>
+        </div>
+        
+        <p id="message" class="message"></p> <!-- Message area for feedback -->
+    </div>
+
+    <footer>
+        <p style="color: white; text-align: center;">&copy; <span id="currentYear"></span> vky. All rights reserved.</p>
+    </footer>
+</body>
+</html>
